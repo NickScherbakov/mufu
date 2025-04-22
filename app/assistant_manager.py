@@ -332,7 +332,7 @@ class AssistantManager:
         self._check_availability()
         
         # Инструкции для ассистента
-        self.instructions_file = Path("e:/chatgptvideo/TODO.md")
+        self.instructions_file = Path("e:/mufu/TODO.md")
         self.instructions = self._load_instructions()
         
         # Журнал обмена сообщениями с ассистентом
@@ -740,7 +740,7 @@ class AssistantManager:
         try:
             if not file_path:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                file_path = f"e:/chatgptvideo/logs/assistant_conversation_{timestamp}.json"
+                file_path = f"e:/mufu/logs/assistant_conversation_{timestamp}.json"
             
             conversation_data = {
                 "assistant": {

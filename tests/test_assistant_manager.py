@@ -22,7 +22,7 @@ def update_plan_fact_checker(report_data):
     log_action("Обновление PLAN-FACT-CHECKER.md")
     
     try:
-        plan_fact_file = Path("e:/chatgptvideo/PLAN-FACT-CHECKER.md")
+        plan_fact_file = Path("e:/mufu/PLAN-FACT-CHECKER.md")
         
         if not plan_fact_file.exists():
             log_error("Файл PLAN-FACT-CHECKER.md не найден", FileNotFoundError())
