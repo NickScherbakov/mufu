@@ -1,0 +1,8 @@
+requests
+pypdf
+python-docx
+pillow
+moviepy
+edge-tts
+pyyaml
+paramiko
