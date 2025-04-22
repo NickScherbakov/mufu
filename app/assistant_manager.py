@@ -403,14 +403,14 @@ class AssistantManager:
                 log_result(f"Инструкции загружены, размер: {len(instructions)} символов")
                 return instructions
             else:
-                default_instructions = "Вы ассистент главного координатора проекта ChatGPT Video."
+                default_instructions = "Вы ассистент главного координатора проекта MUFU."
                 log_error("Файл инструкций не найден, используются стандартные инструкции", 
                           FileNotFoundError(f"Файл {self.instructions_file} не существует"))
                 return default_instructions
                 
         except Exception as e:
             log_error("Ошибка при загрузке инструкций", e)
-            return "Вы ассистент главного координатора проекта ChatGPT Video."
+            return "Вы ассистент главного координатора проекта MUFU."
     
     def send_instruction(self, instruction: str, intelligence_type: Optional[str] = None) -> Dict[str, Any]:
         """
@@ -446,7 +446,7 @@ class AssistantManager:
                 )
             
             # Формируем контекст сообщения
-            system_prompt = f"""Вы ассистент главного координатора проекта ChatGPT Video.
+            system_prompt = f"""Вы ассистент главного координатора проекта MUFU.
             
 {self.instructions}
 
@@ -685,7 +685,7 @@ class AssistantManager:
                 
                 # Обновляем системное сообщение в истории
                 if self.message_history:
-                    system_prompt = f"""Вы ассистент главного координатора проекта ChatGPT Video.
+                    system_prompt = f"""Вы ассистент главного координатора проекта MUFU.
                     
 {self.instructions}
 
@@ -1115,7 +1115,7 @@ if __name__ == "__main__":
     # Отправляем простую инструкцию
     if manager.is_available:
         result = manager.send_instruction(
-            "Опишите свои возможности как ассистента главного координатора проекта ChatGPT Video."
+            "Опишите свои возможности как ассистента главного координатора проекта MUFU."
         )
         
         if result.get("success", False):
